@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+h1, span, .brand {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 35px 1fr 100px 1fr 35px;
+  grid-template-rows: 3vh repeat(4, 23.5vh) 3vh;
+  align-items: center;
+  justify-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: 3vw repeat(6, 15.6666666667vw) 3vw;
+    grid-template-rows: 3vh repeat(6, 15.6666666667vh) 3vh;
+  }
+}
+.container img {
+  width: 110px;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  position: relative;
+  z-index: 50;
+}
+@media only screen and (min-width: 768px) {
+  .container img {
+    width: 150px;
+    grid-row: 1/span 1;
+    grid-column: 5/span 1;
+    margin-left: -50px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .container img {
+    width: 200px;
+  }
+}
+.container h1 {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: #e6ef3a;
+  text-transform: uppercase;
+  font-weight: bolder;
+  grid-row-start: 3;
+  grid-column-start: 3;
+  font-size: 5rem;
+}
+@media only screen and (min-width: 768px) {
+  .container h1 {
+    flex-direction: row;
+    grid-row: 3/7;
+    grid-column: 3/7;
+    font-size: 12.5rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .container h1 {
+    font-size: 15rem;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .container h1 {
+    font-size: 17rem;
+  }
+}
+
+.brand {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: -100px;
+  color: #484848;
+  font-weight: bolder;
+}
+
+#btn__list {
+  display: none;
+}
+@media only screen and (min-width: 1800px) {
+  #btn__list {
+    position: absolute;
+    left: 0px;
+    top: 45%;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  #btn__list button {
+    width: 100%;
+    padding: 25px 40px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #f700ff;
+    color: #484848;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  #btn__list button:first-child {
+    margin-bottom: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
