@@ -94,12 +94,7 @@ tl.to("#feather", {
     );
 
     // btn 
-const playBtn = document.querySelector('#play');
 const reverseBtn = document.querySelector('#reverse');
-
-playBtn.onclick = () => {
-    tl.play();
-}
 
 reverseBtn.onclick = () => {
     tl.reverse();
